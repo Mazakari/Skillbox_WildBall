@@ -3390,10 +3390,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 679327558114075381, guid: 5a48160ee72f45443ad7f5b9ca8b73ed, type: 3}
+      propertyPath: m_Name
+      value: LiftPlatformButton1
+      objectReference: {fileID: 0}
     - target: {fileID: 679327558114075383, guid: 5a48160ee72f45443ad7f5b9ca8b73ed, type: 3}
       propertyPath: _startLiftTip
       value: 
       objectReference: {fileID: 1499685664}
+    - target: {fileID: 679327558593025826, guid: 5a48160ee72f45443ad7f5b9ca8b73ed, type: 3}
+      propertyPath: m_Name
+      value: LiftPlatform1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a48160ee72f45443ad7f5b9ca8b73ed, type: 3}
 --- !u!1001 &996577012
@@ -4633,10 +4641,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 679327558114075381, guid: 5a48160ee72f45443ad7f5b9ca8b73ed, type: 3}
+      propertyPath: m_Name
+      value: LiftPlatformButton2
+      objectReference: {fileID: 0}
     - target: {fileID: 679327558114075383, guid: 5a48160ee72f45443ad7f5b9ca8b73ed, type: 3}
       propertyPath: _startLiftTip
       value: 
       objectReference: {fileID: 1499685664}
+    - target: {fileID: 679327558593025826, guid: 5a48160ee72f45443ad7f5b9ca8b73ed, type: 3}
+      propertyPath: m_Name
+      value: LiftPlatform2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a48160ee72f45443ad7f5b9ca8b73ed, type: 3}
 --- !u!1001 &1411811024

@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class LiftHandler : MonoBehaviour
 {
-    [SerializeField] private Transform _liftPlatform = null;
+    [SerializeField] private Transform _liftPlatform = null;// Ссылка на объект, который будет работать как лифт
 
-    [SerializeField] private LiftButton _liftButton = null;
+    [SerializeField] private LiftButton _liftButton = null;// Ссылка на объект, который будет кнопкой активации лифта
 
-    [SerializeField] private float _yStartPosition;
-    [SerializeField] private float _yTargetPosition;
-    [SerializeField] private float _waitingTime = 3f;
+    [SerializeField] private float _yStartPosition;// Начальное значение высоты (Y) для точки А объекта _liftPlatform
+    [SerializeField] private float _yTargetPosition;// Конечное значение высоты (Y) для точки B объекта _liftPlatform
+    [SerializeField] private float _waitingTime = 3f;// Время нахождения _liftPlatform между точками A и B
 
-    private Vector3 _liftPlatformStartPoint;
-    private Vector3 _liftPlatformTargetPoint;
+    private Vector3 _liftPlatformStartPoint;// Координаты для точки A для платформы лифта
+    private Vector3 _liftPlatformTargetPoint;// Координаты для точки B для платформы лифта
 
-    private float _platfomMoveSpeed = 1f;
+    private float _platfomMoveSpeed = 1f;// Скорость движения _liftPlatform
 
-    
-
-    private Coroutine _movePlatformCoroutine = null;
+    private Coroutine _movePlatformCoroutine = null;// Переменная для хранения корутины для движения _liftPlatform
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +27,9 @@ public class LiftHandler : MonoBehaviour
         _liftPlatform.position = _liftPlatformStartPoint;
     }
 
+    /// <summary>
+    /// Активирует курутину для движения лифта
+    /// </summary>
     public void ActivateLift()
     {
         if (_movePlatformCoroutine != null)
@@ -38,7 +39,11 @@ public class LiftHandler : MonoBehaviour
 
         _movePlatformCoroutine = StartCoroutine(movePlatform());
     }
-   private IEnumerator movePlatform()
+    /// <summary>
+    /// Поднимает и опускает лифт между двумя точками
+    /// </summary>
+    /// <returns>IEnumerator</returns>
+    private IEnumerator movePlatform()
     {
        float lerpAmount = 0;
 
@@ -63,6 +68,6 @@ public class LiftHandler : MonoBehaviour
 
         _liftButton.IsLiftActivated = false;
 
-       yield return null;
+        yield return null;
     }
 }
