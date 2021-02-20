@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonLevelLoader : MonoBehaviour
 {
-    [SerializeField] private int _levelIndexToLoad;
+    [SerializeField] private int _levelIndexToLoad = 0;
 
     public void LoadLevel()
     {

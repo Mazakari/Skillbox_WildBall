@@ -6,8 +6,6 @@ public class DeathTrigger : MonoBehaviour
 {
     private PlayerDeath _playerDeath = null;
 
-    private Coroutine _deathDelayCoroutine = null;
-
     private void Start()
     {
         _playerDeath = FindObjectOfType<PlayerDeath>();
@@ -16,18 +14,7 @@ public class DeathTrigger : MonoBehaviour
     {
         if (other.GetComponent<PlayerMovement>())
         {
-            if (_deathDelayCoroutine != null)
-            {
-                StopCoroutine(DeathDelay());
-            }
-            _deathDelayCoroutine = StartCoroutine(DeathDelay());
+            _playerDeath.PlayerDied();
         }
-    }
-
-    private IEnumerator DeathDelay()
-    {
-        _playerDeath.PlayerDeathEffect();
-        yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

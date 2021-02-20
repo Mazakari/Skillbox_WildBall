@@ -8,8 +8,8 @@ public class LiftHandler : MonoBehaviour
 
     [SerializeField] private LiftButton _liftButton = null;// Ссылка на объект, который будет кнопкой активации лифта
 
-    [SerializeField] private float _yStartPosition;// Начальное значение высоты (Y) для точки А объекта _liftPlatform
-    [SerializeField] private float _yTargetPosition;// Конечное значение высоты (Y) для точки B объекта _liftPlatform
+    [SerializeField] private float _yStartPosition = 0f;// Начальное значение высоты (Y) для точки А объекта _liftPlatform
+    [SerializeField] private float _yTargetPosition = 0f;// Конечное значение высоты (Y) для точки B объекта _liftPlatform
     [SerializeField] private float _waitingTime = 3f;// Время нахождения _liftPlatform между точками A и B
 
     private Vector3 _liftPlatformStartPoint;// Координаты для точки A для платформы лифта

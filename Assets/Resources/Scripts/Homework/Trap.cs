@@ -6,8 +6,6 @@ public class Trap : MonoBehaviour
 {
     private PlayerDeath _playerDeath = null;
 
-    private Coroutine _deathDelayCoroutine = null;
-
     private void Start()
     {
         _playerDeath = FindObjectOfType<PlayerDeath>();
@@ -17,18 +15,7 @@ public class Trap : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerMovement>())
         {
-            if (_deathDelayCoroutine != null)
-            {
-                StopCoroutine(DeathDelay(collision));
-            }
-            _deathDelayCoroutine = StartCoroutine(DeathDelay(collision));
+            _playerDeath.PlayerDied();
         }
-    }
-
-    private IEnumerator DeathDelay(Collision collision)
-    {
-        _playerDeath.PlayerDeathEffect();
-        yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
