@@ -3,6 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class FinishLevel : MonoBehaviour
 {
+    private LevelManager _levelManager = null;
+
+    private void Awake()
+    {
+        _levelManager = FindObjectOfType<LevelManager>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerMovement>())
@@ -13,7 +19,7 @@ public class FinishLevel : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(0);
+                _levelManager.IsGameFinished = true;
             }
         }
     }
