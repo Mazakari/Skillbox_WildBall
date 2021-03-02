@@ -13,14 +13,14 @@ EditorBuildSettings:
     guid: 854eab8d676fa5f46ad90c963b78c947
   - enabled: 1
     path: Assets/Scenes/Homework/Level2.unity
-    guid: 754e217003e22de4ba3f006a282a8195
+    guid: 69c79b220ae1d80439746c835b63986c
   - enabled: 1
     path: Assets/Scenes/Homework/Level3.unity
-    guid: f2b160ede8a4fb04ca6df6beb3ca4fb3
+    guid: aea76425def572b4792b5211a10aca1c
   - enabled: 1
     path: Assets/Scenes/Homework/Level4.unity
-    guid: 7473a4494da71aa429b8217b0cc710c4
+    guid: cf11364aa7421f34e8ada681a632358b
   - enabled: 1
     path: Assets/Scenes/Homework/Level5.unity
-    guid: b048364f51ebc8a419a5a38e0cc3737f
+    guid: bbe3447c97667b346b62d7f2ef3724fc
   m_configObjects: {}

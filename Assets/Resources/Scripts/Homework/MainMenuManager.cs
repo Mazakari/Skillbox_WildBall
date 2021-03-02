@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -11,5 +9,26 @@ public class MainMenuManager : MonoBehaviour
     {
         _mainMenuPopup.SetActive(true);
         _selectLevelPopup.SetActive(false);
+    }
+
+    private void Update()
+    {
+        ExitGame();
+    }
+
+    /// <summary>
+    /// Метод для выхода из игры
+    /// </summary>
+    public void ExitGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
+    public void OnButtonExitGame()
+    {
+        Application.Quit();
     }
 }
